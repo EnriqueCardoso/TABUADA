@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabuada.css">
+    <title>Tabuada Do Cardoso</title>
+    <script>
+    function calcular() {
+    const valor = document.getElementById("botarvalor").value;
+    const num = [0,1,2,3,4,5,6,7,8,9,10];
+    let resultado = [];
+
+
+    for(let numero of num) {
+    resultado.push(`${valor} X ${numero} = ` + valor*numero);
+}
+
+    document.getElementById("resulta").innerHTML = resultado.join(" <br> ");
+}
+    </script>
+</head>
+
+<body>  
+    <form>
+        <h1>Tabuada Do Cardoso</h1>
+        <div id="botao">
+            <label for="botarvalor">Informe um número que deseja saber a tabuada:</label>
+            <input type="number" id="botarvalor" oninput="calcular()">
+        </div>
+        <div id="resulta"></div>
+    </form>
+</body>
+
+</html>
